@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: hallway.ma
-//Last modified: Thu, Feb 02, 2017 03:33:34 PM
+//Last modified: Thu, Feb 02, 2017 03:42:56 PM
 //Codeset: UTF-8
 requires maya "2017";
 currentUnit -l foot -a degree -t film;
@@ -12,8 +12,8 @@ fileInfo "osv" "Mac OS X 10.11.6";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "55E64177-7649-760F-C43C-D8A75108521F";
-	setAttr ".t" -type "double3" 6.62188475607977 7.4363354453744668 2.7814282041367875 ;
-	setAttr ".r" -type "double3" -18.938352729538266 411.79999999996852 2.5715649280782712e-15 ;
+	setAttr ".t" -type "double3" 3.1314721825057386 8.6755134457390746 1.6959077177439217 ;
+	setAttr ".r" -type "double3" -21.338352729520231 750.59999999989145 -9.2378278905782426e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "304E67FB-EA4E-B8CA-D585-77BC94AE1F71";
 	setAttr -k off ".v";
@@ -21,7 +21,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.0032808398950131233;
 	setAttr ".fcp" 328.08398950131232;
 	setAttr ".fd" 0.16404199475065617;
-	setAttr ".coi" 9.2641448868188334;
+	setAttr ".coi" 5.7785149038926624;
 	setAttr ".ow" 0.32808398950131235;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
@@ -95,15 +95,12 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.48655438423156738 ;
+	setAttr ".pv" -type "double2" 0.50030471384525299 0.48655438423156738 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[76:83]" -type "float3"  0 41.110657 0 0 41.110657 
-		0 0 41.110657 0 0 41.110657 0 0 41.110657 0 0 41.110657 0 0 41.110657 0 0 41.110657 
-		0;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
@@ -391,6 +388,94 @@ createNode polyTweak -n "polyTweak5";
 	setAttr ".tk[73]" -type "float3" -0.22955146 1.687539e-13 0 ;
 	setAttr ".tk[74]" -type "float3" -0.22955146 1.687539e-13 0 ;
 	setAttr ".tk[75]" -type "float3" -0.22955146 7.6293945e-06 0 ;
+createNode polySplitRing -n "polySplitRing8";
+	rename -uid "3110987E-1C4B-4CF2-17D6-B98CD657BFDF";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 3 "e[156:157]" "e[159]" "e[161]";
+	setAttr ".ix" -type "matrix" 8.0510046290860462 0 0 0 0 0.081830928652584373 0 0
+		 0 0 5.9187161986924437 0 0 0 0 1;
+	setAttr ".wt" 0.9312441349029541;
+	setAttr ".dr" no;
+	setAttr ".re" 156;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyTweak -n "polyTweak6";
+	rename -uid "141400CF-3841-603C-70A6-A397F07E7742";
+	setAttr ".uopa" yes;
+	setAttr -s 8 ".tk[76:83]" -type "float3"  0 1253.052856445 0 0 1253.052856445
+		 0 0 1253.052856445 0 0 1253.052856445 0 0 1253.052856445 0 0 1253.052856445 0 0 1253.052856445
+		 0 0 1253.052856445 0;
+createNode polySplitRing -n "polySplitRing9";
+	rename -uid "1FDFAE11-1D4F-F838-4439-F2B54C32DA85";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 3 "e[148:149]" "e[151]" "e[153]";
+	setAttr ".ix" -type "matrix" 8.0510046290860462 0 0 0 0 0.081830928652584373 0 0
+		 0 0 5.9187161986924437 0 0 0 0 1;
+	setAttr ".wt" 0.9312441349029541;
+	setAttr ".dr" no;
+	setAttr ".re" 149;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyExtrudeFace -n "polyExtrudeFace3";
+	rename -uid "0084AA2B-1E4E-2FF1-8588-97AB45150A36";
+	setAttr ".ics" -type "componentList" 1 "f[85:86]";
+	setAttr ".ix" -type "matrix" 8.0510046290860462 0 0 0 0 0.081830928652584373 0 0
+		 0 0 5.9187161986924437 0 0 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -0.010188387 5.8811378 -2.4781184 ;
+	setAttr ".rs" 2129506652;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -3.736308310158158 5.7654861933298971 -2.9593586104648648 ;
+	setAttr ".cbx" -type "double3" 3.7159315372822532 5.9967895423193935 -1.9968783158029921 ;
+createNode polyMergeVert -n "polyMergeVert1";
+	rename -uid "C239BD33-9042-D824-5862-78AF683D9318";
+	setAttr ".ics" -type "componentList" 2 "vtx[94]" "vtx[99]";
+	setAttr ".ix" -type "matrix" 8.0510046290860462 0 0 0 0 0.081830928652584373 0 0
+		 0 0 5.9187161986924437 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweak -n "polyTweak7";
+	rename -uid "49889492-2946-59CD-EDF9-F887C14356D0";
+	setAttr ".uopa" yes;
+	setAttr -s 8 ".tk[92:99]" -type "float3"  13.92547035 9.094947e-13 0
+		 13.92547035 9.094947e-13 0 13.92547035 9.094947e-13 0 13.92547035 9.094947e-13 0
+		 -13.92547035 9.094947e-13 0 -13.92547035 9.094947e-13 0 -13.92547035 9.094947e-13
+		 0 -13.92547035 9.094947e-13 0;
+createNode polyMergeVert -n "polyMergeVert2";
+	rename -uid "955E9C24-9346-060A-01BC-00847CE9C20E";
+	setAttr ".ics" -type "componentList" 2 "vtx[94]" "vtx[99]";
+	setAttr ".ix" -type "matrix" 8.0510046290860462 0 0 0 0 0.081830928652584373 0 0
+		 0 0 5.9187161986924437 0 0 0 0 1;
+	setAttr ".d" 0.01;
+	setAttr ".am" yes;
+createNode polyMergeVert -n "polyMergeVert3";
+	rename -uid "13037151-EC4B-2385-8269-34B4FF588438";
+	setAttr ".ics" -type "componentList" 2 "vtx[95]" "vtx[98]";
+	setAttr ".ix" -type "matrix" 8.0510046290860462 0 0 0 0 0.081830928652584373 0 0
+		 0 0 5.9187161986924437 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyMergeVert -n "polyMergeVert4";
+	rename -uid "61E06601-554D-913E-3435-84921658F31F";
+	setAttr ".ics" -type "componentList" 2 "vtx[95]" "vtx[98]";
+	setAttr ".ix" -type "matrix" 8.0510046290860462 0 0 0 0 0.081830928652584373 0 0
+		 0 0 5.9187161986924437 0 0 0 0 1;
+	setAttr ".d" 0.032808398950131233;
+createNode polyMergeVert -n "polyMergeVert5";
+	rename -uid "508F7F5F-B84D-81E6-A42D-52908E50C8F0";
+	setAttr ".ics" -type "componentList" 2 "vtx[93]" "vtx[96]";
+	setAttr ".ix" -type "matrix" 8.0510046290860462 0 0 0 0 0.081830928652584373 0 0
+		 0 0 5.9187161986924437 0 0 0 0 1;
+	setAttr ".d" 0.032808398950131233;
+createNode polyMergeVert -n "polyMergeVert6";
+	rename -uid "BAF2425C-404D-7059-F065-A29301765CDC";
+	setAttr ".ics" -type "componentList" 2 "vtx[92]" "vtx[96]";
+	setAttr ".ix" -type "matrix" 8.0510046290860462 0 0 0 0 0.081830928652584373 0 0
+		 0 0 5.9187161986924437 0 0 0 0 1;
+	setAttr ".d" 0.032808398950131233;
+createNode deleteComponent -n "deleteComponent1";
+	rename -uid "73C88D03-2D4D-47BC-0C6D-019A7074F17C";
+	setAttr ".dc" -type "componentList" 3 "e[182]" "e[184]" "e[186:187]";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -419,7 +504,7 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-connectAttr "polyExtrudeFace2.out" "pCubeShape1.i";
+connectAttr "deleteComponent1.og" "pCubeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -449,6 +534,27 @@ connectAttr "pCubeShape1.wm" "polySplitRing7.mp";
 connectAttr "polyTweak5.out" "polyExtrudeFace2.ip";
 connectAttr "pCubeShape1.wm" "polyExtrudeFace2.mp";
 connectAttr "polySplitRing7.out" "polyTweak5.ip";
+connectAttr "polyTweak6.out" "polySplitRing8.ip";
+connectAttr "pCubeShape1.wm" "polySplitRing8.mp";
+connectAttr "polyExtrudeFace2.out" "polyTweak6.ip";
+connectAttr "polySplitRing8.out" "polySplitRing9.ip";
+connectAttr "pCubeShape1.wm" "polySplitRing9.mp";
+connectAttr "polySplitRing9.out" "polyExtrudeFace3.ip";
+connectAttr "pCubeShape1.wm" "polyExtrudeFace3.mp";
+connectAttr "polyTweak7.out" "polyMergeVert1.ip";
+connectAttr "pCubeShape1.wm" "polyMergeVert1.mp";
+connectAttr "polyExtrudeFace3.out" "polyTweak7.ip";
+connectAttr "polyMergeVert1.out" "polyMergeVert2.ip";
+connectAttr "pCubeShape1.wm" "polyMergeVert2.mp";
+connectAttr "polyMergeVert2.out" "polyMergeVert3.ip";
+connectAttr "pCubeShape1.wm" "polyMergeVert3.mp";
+connectAttr "polyMergeVert3.out" "polyMergeVert4.ip";
+connectAttr "pCubeShape1.wm" "polyMergeVert4.mp";
+connectAttr "polyMergeVert4.out" "polyMergeVert5.ip";
+connectAttr "pCubeShape1.wm" "polyMergeVert5.mp";
+connectAttr "polyMergeVert5.out" "polyMergeVert6.ip";
+connectAttr "pCubeShape1.wm" "polyMergeVert6.mp";
+connectAttr "polyMergeVert6.out" "deleteComponent1.ig";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of hallway.ma
