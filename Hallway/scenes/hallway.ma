@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: hallway.ma
-//Last modified: Mon, Feb 06, 2017 03:00:00 PM
+//Last modified: Tue, Feb 07, 2017 11:48:55 AM
 //Codeset: 1252
 requires maya "2017";
 currentUnit -l foot -a degree -t film;
@@ -12,8 +12,8 @@ fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "55E64177-7649-760F-C43C-D8A75108521F";
-	setAttr ".t" -type "double3" 7.0570617244663483 6.7564405335354181 8.0421041947072229 ;
-	setAttr ".r" -type "double3" -6.3383527294487667 1110.199999998779 0 ;
+	setAttr ".t" -type "double3" 4.3494501162932426 10.157821034000278 4.5839493547409669 ;
+	setAttr ".r" -type "double3" -27.338352729449149 1106.5999999987712 -8.8926343755633645e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "304E67FB-EA4E-B8CA-D585-77BC94AE1F71";
 	setAttr -k off ".v";
@@ -21,7 +21,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.0032808398950131233;
 	setAttr ".fcp" 328.08398950131232;
 	setAttr ".fd" 0.16404199475065617;
-	setAttr ".coi" 13.982507556758486;
+	setAttr ".coi" 10.767786036368047;
 	setAttr ".ow" 0.32808398950131235;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
