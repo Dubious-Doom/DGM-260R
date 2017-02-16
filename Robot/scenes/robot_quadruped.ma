@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: robot_quadruped.ma
-//Last modified: Thu, Feb 16, 2017 10:33:22 AM
+//Last modified: Thu, Feb 16, 2017 10:39:09 AM
 //Codeset: 1252
 requires maya "2017";
 requires -nodeType "displayPoints" "Type" "019";
@@ -16,17 +16,17 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "0F002E0E-2E45-F205-0E93-A4AFE15877B0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.9477330260208481 0.10141671070934141 4.2703261445155603 ;
-	setAttr ".r" -type "double3" -15.338352752690882 4354.5999999989253 9.659865615843212e-016 ;
+	setAttr ".t" -type "double3" 7.1105691279422478 3.3401801860268474 7.4031145220598145 ;
+	setAttr ".r" -type "double3" -28.538352752736589 4348.9999999985766 -9.0912503327369639e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DFC54C77-0541-2298-490C-3A957A2171FB";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 5.3318709949010072;
+	setAttr ".coi" 9.5858721303354208;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 3.0279072956973239 -1.3089625961312752 0.037797795922607347 ;
+	setAttr ".tp" -type "double3" 3.0279074000671651 -1.2394406758536469 0.037797795922607347 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -10202,7 +10202,7 @@ createNode groupId -n "groupId17";
 	rename -uid "60AB01C5-4F2B-F179-7714-E8876B56D944";
 	setAttr ".ihi" 0;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "E2E0F8D6-496D-2444-4DE7-E5A496AE7332";
+	rename -uid "79C9E599-454F-0464-AB34-3988B7930737";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -4616.943442019362 -2287.1805130645089 ;
 	setAttr ".tgi[0].vh" -type "double2" 320.21574712567599 860.80247629241546 ;
