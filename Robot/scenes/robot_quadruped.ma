@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: robot_quadruped.ma
-//Last modified: Tue, Feb 21, 2017 05:53:29 PM
+//Last modified: Tue, Feb 21, 2017 05:58:52 PM
 //Codeset: 1252
 requires maya "2017";
 requires -nodeType "displayPoints" "Type" "019";
@@ -16,13 +16,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "0F002E0E-2E45-F205-0E93-A4AFE15877B0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.8654924141880298 3.8505864440915651 11.83731456433261 ;
-	setAttr ".r" -type "double3" 343.46164728291581 4692.2000000153121 8.1351109088786609e-016 ;
+	setAttr ".t" -type "double3" 0.97127936937159909 2.0836445221946005 10.047990298693097 ;
+	setAttr ".r" -type "double3" 349.46164728251489 5045.3999999998514 -1.9967081373048871e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DFC54C77-0541-2298-490C-3A957A2171FB";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 12.389569601097451;
+	setAttr ".coi" 9.4036450150962843;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -229,23 +229,15 @@ createNode mesh -n "headShape" -p "head";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.50072944164276123 0.013607652857899666 ;
+	setAttr ".pv" -type "double2" 0.49999998509883881 0.48411363363265991 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 70 ".pt[0:69]" -type "float3"  0 0.36532974 -0.020935893 
-		0 0 0 0 0 0 0 0 0 0 0 0 0.18114102 0.92863941 0.048103809 -0.18114096 0.92863941 
-		0.048103809 0 0 0 0 0 0 -0.22590923 -0.072758675 0.0026024282 0.22590923 -0.072758675 
-		0.0026024282 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 -0.020915151 -0.21670151 -0.0072131455 0.037708104 -0.063979149 
-		-0.0030555427 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.0031469464 -0.029911041 
-		0.013979524 0 0 0 0 0 0 0 0 0 0 0 0 -3.7252903e-009 0 0 -1.8626451e-009 0 0 0 4.7683716e-007 
-		0 1.8626451e-009 9.5367432e-007 0 0.013123494 1.9122896 0.10240018 3.7252903e-009 
-		0 0 0 0 0 1.8626451e-009 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.8626451e-009 0 0 -1.8626451e-009 
-		0 0 -9.3132257e-010 0 0;
+	setAttr -s 3 ".pt";
+	setAttr ".pt[42]" -type "float3" 0.04578786 1.1137811 -0.064151317 ;
+	setAttr ".pt[46]" -type "float3" 0.04578786 1.1137811 -0.064151317 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "torso" -p "Core";
 	rename -uid "781DC765-0242-F046-08B3-94A0BAF1AC81";
@@ -7164,6 +7156,35 @@ createNode polySplit -n "polySplit30";
 		-2147483609 -2147483647 -2147483590 -2147483542 -2147483635 -2147483648 -2147483615 -2147483627 -2147483584;
 	setAttr ".sma" 180;
 	setAttr ".m2015" yes;
+createNode polyTweak -n "polyTweak93";
+	rename -uid "2CB3AB65-4776-65FD-4008-209C7F2E65C8";
+	setAttr ".uopa" yes;
+	setAttr -s 70 ".tk[0:69]" -type "float3"  0 0.36532974 -0.020935893
+		 0.34637293 -2.5313085e-014 0 -0.34637293 -2.5313085e-014 0 0.29571933 -1.5099033e-014
+		 0 -0.29571933 -1.5099033e-014 0 0.18114102 0.92863941 0.048103809 -0.18114096 0.92863941
+		 0.048103809 -0.22964872 -1.0214052e-014 0 0.22964872 -1.0214052e-014 0 -0.22590923
+		 -0.072758675 0.0026024282 0.22590923 -0.072758675 0.0026024282 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 -0.34637293 -2.5313085e-014 0 0.34637293 -2.5313085e-014 0 0 0
+		 0 0.34637293 -2.5313085e-014 0 -0.34637293 -2.5313085e-014 0 0 0 0 0.22964872 -1.0214052e-014
+		 0 0 0 0 0 0 0 -0.020915151 -0.21670151 -0.0072131455 0.037708104 -0.063979149 -0.0030555427
+		 0 0 0 0 0 0 -0.22964872 -1.0214052e-014 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.17460334 0 0 0 0 0 0 0
+		 0 -0.0031469464 -0.029911041 0.013979524 0 0 0 0 0 0 0 0 0 0.17460334 0 0 -3.7252903e-009
+		 0 0 -1.8626451e-009 0 0 0 4.7683716e-007 0 1.8626451e-009 9.5367432e-007 0 0.013123494
+		 1.91228962 0.10240018 3.7252903e-009 0 0 0 0 0 1.8626451e-009 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 -1.8626451e-009 0 0 -1.8626451e-009 0 0 -9.3132257e-010 0 0;
+createNode polySplit -n "polySplit31";
+	rename -uid "7F4D9F6C-4EEA-F1B4-690A-BD88BFBBB692";
+	setAttr -s 2 ".e[0:1]"  1 1;
+	setAttr -s 2 ".d[0:1]"  -2147483587 -2147483626;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit32";
+	rename -uid "DCF47529-4E17-E2CB-4B7D-F893317F86DB";
+	setAttr -s 2 ".e[0:1]"  1 0;
+	setAttr -s 2 ".d[0:1]"  -2147483618 -2147483632;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -7233,7 +7254,7 @@ connectAttr ":defaultColorMgtGlobals.cfe" "robotBackReference0Shape2.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "robotBackReference0Shape2.cmcp";
 connectAttr ":defaultColorMgtGlobals.wsn" "robotBackReference0Shape2.ws";
 connectAttr ":frontShape.msg" "robotBackReference0Shape2.ltc";
-connectAttr "polySplit30.out" "headShape.i";
+connectAttr "polySplit32.out" "headShape.i";
 connectAttr "polyAverageVertex41.out" "torsoShape.i";
 connectAttr "polyTweakUV15.uvtk[0]" "torsoShape.uvst[0].uvtw";
 connectAttr "polyExtrudeFace30.out" "pelvisShape.i";
@@ -7767,6 +7788,9 @@ connectAttr "polyAverageVertex40.out" "polyAverageVertex41.ip";
 connectAttr "torsoShape.wm" "polyAverageVertex41.mp";
 connectAttr "polyMergeVert32.out" "polyTweak92.ip";
 connectAttr "polyTweak92.out" "polySplit30.ip";
+connectAttr "polySplit30.out" "polyTweak93.ip";
+connectAttr "polyTweak93.out" "polySplit31.ip";
+connectAttr "polySplit31.out" "polySplit32.ip";
 connectAttr "svgBlinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "svgBlinn1.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
