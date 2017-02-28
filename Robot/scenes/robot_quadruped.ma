@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: robot_quadruped.ma
-//Last modified: Tue, Feb 28, 2017 02:43:23 PM
+//Last modified: Tue, Feb 28, 2017 02:58:18 PM
 //Codeset: UTF-8
 requires maya "2017";
 requires -nodeType "displayPoints" "Type" "019";
@@ -16,13 +16,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "0F002E0E-2E45-F205-0E93-A4AFE15877B0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.16132725895348071 1.4644892416062349 1.806614370425301 ;
-	setAttr ".r" -type "double3" 356.66164730820071 1808.9999999994943 0 ;
+	setAttr ".t" -type "double3" -1.93606731253707 3.1978325778307344 -0.62463106278862091 ;
+	setAttr ".r" -type "double3" 318.26164730785405 1683.4000000004658 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DFC54C77-0541-2298-490C-3A957A2171FB";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 1.2219397130238145;
+	setAttr ".coi" 2.5591092209694626;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
