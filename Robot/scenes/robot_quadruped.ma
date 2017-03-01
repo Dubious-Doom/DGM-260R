@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: robot_quadruped.ma
-//Last modified: Wed, Mar 01, 2017 02:00:56 PM
+//Last modified: Wed, Mar 01, 2017 02:08:51 PM
 //Codeset: 1252
 requires maya "2017";
 requires -nodeType "displayPoints" "Type" "019";
@@ -16,13 +16,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "0F002E0E-2E45-F205-0E93-A4AFE15877B0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.6066667789855846 2.2108758176525622 2.3494568226259531 ;
-	setAttr ".r" -type "double3" 350.06164731053553 -676.59999999985405 -5.4718303715789646e-016 ;
+	setAttr ".t" -type "double3" 0.18372018049545744 3.1590695981830299 7.1275559648916662 ;
+	setAttr ".r" -type "double3" 348.86164730633908 359.79999999998233 3.1060293541104581e-017 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DFC54C77-0541-2298-490C-3A957A2171FB";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 4.8411347280052794;
+	setAttr ".coi" 7.6236905003958571;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -303,7 +303,7 @@ createNode mesh -n "ShouldersShape" -p "Shoulders";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.375 ;
+	setAttr ".pv" -type "double2" 0.50000011920928955 0.49999991059303284 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -442,7 +442,7 @@ createNode mesh -n "upperArmsShape" -p "upperArms";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.8125 ;
+	setAttr ".pv" -type "double2" 0.51559156179428101 0.49117386341094971 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -472,7 +472,7 @@ createNode mesh -n "ForearmsShape" -p "Forearms";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.5 ;
+	setAttr ".pv" -type "double2" 0.28820896148681641 0.2893911749124527 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -9146,6 +9146,57 @@ createNode polyTweakUV -n "polyTweakUV22";
 		 0.25569737 0.39242575 0.18363115 0.29234314 -0.16319498 -0.2188659 0.25087035 -0.22757229
 		 0.23232436 -0.24904385 0.15675676 0.28051782 -0.28075829 -0.037249841 0.2224189 0.11645015
 		 -0.41873258;
+createNode polyFlipUV -n "polyFlipUV3";
+	rename -uid "5CAB6891-4BD5-4146-0CA5-9C87FB041ADE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[128:255]";
+	setAttr ".ix" -type "matrix" 1.3151193737143805 0 -0.016919130988761882 0 0 1.4467510213229304 0 0
+		 0.016919130988761882 0 1.3151193737143805 0 1.2868323336622152 0.84490662233316882 0.10590981297887547 1;
+createNode polyFlipUV -n "polyFlipUV4";
+	rename -uid "F616BDB6-4B0F-AC52-66E2-E0AA1191D469";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:77]";
+	setAttr ".ix" -type "matrix" 0.28112268116725952 0 0 0 0 0.25543641478351614 -0.131859414330675 0
+		 0 0.11746152838238012 0.22754500948824147 0 1.2126497130112104 0.033538930881684956 0.49777751526612524 1;
+createNode polyFlipUV -n "polyFlipUV5";
+	rename -uid "F114256D-4456-C206-867F-DB9E29C63FA8";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[224:447]";
+	setAttr ".ix" -type "matrix" 0.67889219690007341 0.052365522491217668 0.02432365560885277 0
+		 -0.036396787513289251 0.7807731483538638 -0.66503567908491468 0 -0.061292675020361106 0.51320266202247622 0.60587082364382827 0
+		 1.3560298730237117 -1.0252753061450612 1.3195176937402973 1;
+createNode polyMapCut -n "polyMapCut4";
+	rename -uid "0E416D1E-48FD-C819-C3C1-A8A03FE757A7";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 28 "e[82]" "e[87]" "e[92]" "e[97]" "e[102]" "e[107]" "e[112]" "e[117]" "e[122]" "e[127]" "e[132]" "e[137]" "e[142]" "e[147]" "e[152]" "e[237]" "e[248]" "e[250:251]" "e[271]" "e[273:274]" "e[328]" "e[330:331]" "e[351]" "e[353:354]" "e[408]" "e[410:411]" "e[431]" "e[433:434]";
+createNode polyFlipUV -n "polyFlipUV6";
+	rename -uid "12039B7E-4D39-6F90-71F9-0EB502166E9F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 28 "f[0:1]" "f[4:5]" "f[8:9]" "f[12:13]" "f[16:17]" "f[20:21]" "f[24:25]" "f[28:29]" "f[32:33]" "f[36:37]" "f[40:41]" "f[44:45]" "f[48:49]" "f[52:53]" "f[56:57]" "f[60:61]" "f[64:65]" "f[68:69]" "f[72:73]" "f[76:77]" "f[104:134]" "f[143:147]" "f[152:155]" "f[168:179]" "f[184:187]" "f[200:211]" "f[216:219]" "f[232:239]";
+	setAttr ".ix" -type "matrix" 0.54005549555459809 0 0 0 0 0.52691353239268235 0 0
+		 0 0 0.48004929189770584 0 0 0.29611069367076642 0.084512307847550483 1;
+createNode polyMapCut -n "polyMapCut5";
+	rename -uid "415EB8F4-42C6-18CC-8D2C-0FBF21DDD789";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 28 "e[82]" "e[87]" "e[92]" "e[97]" "e[102]" "e[107]" "e[112]" "e[117]" "e[122]" "e[127]" "e[132]" "e[137]" "e[142]" "e[147]" "e[152]" "e[157]" "e[162]" "e[167]" "e[172]" "e[177]" "e[257]" "e[273]" "e[279]" "e[300]" "e[321]" "e[342]" "e[363]" "e[385]";
+createNode polyFlipUV -n "polyFlipUV7";
+	rename -uid "1A0966E5-481D-A486-2540-3DB8FCF4C4F3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 33 "f[0:1]" "f[4:5]" "f[8:9]" "f[12:13]" "f[16:17]" "f[20:21]" "f[24:25]" "f[28:29]" "f[32:33]" "f[36:37]" "f[40:41]" "f[44:45]" "f[48:49]" "f[52:53]" "f[56:57]" "f[60:61]" "f[64:65]" "f[68:69]" "f[72:73]" "f[76:77]" "f[104:134]" "f[143]" "f[146:156]" "f[168:178]" "f[190:200]" "f[218:225]" "f[234:241]" "f[250:257]" "f[266:273]" "f[282:289]" "f[298:305]" "f[314:321]" "f[330:337]";
+	setAttr ".ix" -type "matrix" 0.77896224621823507 0 0 0 0 0.38124604067480422 0.065325627925555921 0
+		 0 -0.20765020133613121 1.2118646175884007 0 0 -0.52440070321319565 -0.021013256345023823 1;
+createNode polyFlipUV -n "polyFlipUV8";
+	rename -uid "34EA18A8-4E76-3D1D-E06E-9FB1895837AE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "f[128:255]" "f[384:511]";
+	setAttr ".ix" -type "matrix" 0.58775224130782266 0 0.022387923894258588 0 0 0.6469963199478127 0 0
+		 -0.022387923894258588 0 0.58775224130782266 0 0.68051874319966066 -0.53508018653906475 0.28697891298188893 1;
+createNode polyFlipUV -n "polyFlipUV9";
+	rename -uid "8847CA55-4B5A-B66B-913D-6CAD7EF4392F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "f[244:487]" "f[732:975]";
+	setAttr ".ix" -type "matrix" 0.2548554361267879 0 0.0097076347941248142 0 0 0.38414846862076263 0 0
+		 -0.011346586290840011 0 0.29788298169729144 0 0.66765560227752974 -2.0270750093538021 0.79896798379215372 1;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -9222,10 +9273,10 @@ connectAttr "polyTweakUV22.out" "headShape.i";
 connectAttr "polyTweakUV22.uvtk[0]" "headShape.uvst[0].uvtw";
 connectAttr "polyTweakUV18.out" "torsoShape.i";
 connectAttr "polyTweakUV18.uvtk[0]" "torsoShape.uvst[0].uvtw";
-connectAttr "polyPlanarProj11.out" "pelvisShape.i";
-connectAttr "polyPlanarProj10.out" "spineShape.i";
-connectAttr "polyPlanarProj7.out" "ShouldersShape.i";
-connectAttr "polyFlipUV1.out" "upperArmsShape.i";
+connectAttr "polyFlipUV7.out" "pelvisShape.i";
+connectAttr "polyFlipUV6.out" "spineShape.i";
+connectAttr "polyFlipUV3.out" "ShouldersShape.i";
+connectAttr "polyFlipUV4.out" "upperArmsShape.i";
 connectAttr "leftForearm_translateX.o" "Forearms.tx";
 connectAttr "leftForearm_translateY.o" "Forearms.ty";
 connectAttr "leftForearm_translateZ.o" "Forearms.tz";
@@ -9236,7 +9287,7 @@ connectAttr "leftForearm_scaleX.o" "Forearms.sx";
 connectAttr "leftForearm_scaleY.o" "Forearms.sy";
 connectAttr "leftForearm_scaleZ.o" "Forearms.sz";
 connectAttr "leftForearm_visibility.o" "Forearms.v";
-connectAttr "polyPlanarProj9.out" "ForearmsShape.i";
+connectAttr "polyFlipUV5.out" "ForearmsShape.i";
 connectAttr "leftFinger01_translateX.o" "upperFinger.tx";
 connectAttr "leftFinger01_translateY.o" "upperFinger.ty";
 connectAttr "leftFinger01_translateZ.o" "upperFinger.tz";
@@ -9270,9 +9321,9 @@ connectAttr "leftFinger03_scaleX.o" "outerFinger.sx";
 connectAttr "leftFinger03_scaleY.o" "outerFinger.sy";
 connectAttr "leftFinger03_scaleZ.o" "outerFinger.sz";
 connectAttr "polyAutoProj5.out" "outerFingerShape.i";
-connectAttr "polyPlanarProj14.out" "CalvesShape.i";
+connectAttr "polyFlipUV9.out" "CalvesShape.i";
 connectAttr "polyAutoProj7.out" "ThighsShape.i";
-connectAttr "polyPlanarProj12.out" "HipsShape.i";
+connectAttr "polyFlipUV8.out" "HipsShape.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "svgBlinn1SG.message" ":defaultLightSet.message";
@@ -10049,6 +10100,22 @@ connectAttr "polyTweakUV20.out" "polyMapCut2.ip";
 connectAttr "polyMapCut2.out" "polyTweakUV21.ip";
 connectAttr "polyTweakUV21.out" "polyMapCut3.ip";
 connectAttr "polyMapCut3.out" "polyTweakUV22.ip";
+connectAttr "polyPlanarProj7.out" "polyFlipUV3.ip";
+connectAttr "ShouldersShape.wm" "polyFlipUV3.mp";
+connectAttr "polyFlipUV1.out" "polyFlipUV4.ip";
+connectAttr "upperArmsShape.wm" "polyFlipUV4.mp";
+connectAttr "polyPlanarProj9.out" "polyFlipUV5.ip";
+connectAttr "ForearmsShape.wm" "polyFlipUV5.mp";
+connectAttr "polyPlanarProj10.out" "polyMapCut4.ip";
+connectAttr "polyMapCut4.out" "polyFlipUV6.ip";
+connectAttr "spineShape.wm" "polyFlipUV6.mp";
+connectAttr "polyPlanarProj11.out" "polyMapCut5.ip";
+connectAttr "polyMapCut5.out" "polyFlipUV7.ip";
+connectAttr "pelvisShape.wm" "polyFlipUV7.mp";
+connectAttr "polyPlanarProj12.out" "polyFlipUV8.ip";
+connectAttr "HipsShape.wm" "polyFlipUV8.mp";
+connectAttr "polyPlanarProj14.out" "polyFlipUV9.ip";
+connectAttr "CalvesShape.wm" "polyFlipUV9.mp";
 connectAttr "svgBlinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
