@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: robot_quadruped.ma
-//Last modified: Thu, Mar 02, 2017 12:25:26 PM
+//Last modified: Thu, Mar 02, 2017 12:41:27 PM
 //Codeset: 1252
 requires maya "2017";
 requires -nodeType "displayPoints" "Type" "019";
@@ -16,13 +16,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "0F002E0E-2E45-F205-0E93-A4AFE15877B0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.62675321470194723 -1.2823686970410058 -3.4144910238970843 ;
-	setAttr ".r" -type "double3" 351.86164730731554 913.4000000001347 0 ;
+	setAttr ".t" -type "double3" 1.761461558001806 1.7072162258901911 6.9876082633709142 ;
+	setAttr ".r" -type "double3" 341.66164730735142 1093.4000000000019 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DFC54C77-0541-2298-490C-3A957A2171FB";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 2.9301749750279367;
+	setAttr ".coi" 8.3954821227709271;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -739,7 +739,7 @@ createNode mesh -n "CalvesShape" -p "Calves";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.49999992549419403 0.5 ;
+	setAttr ".pv" -type "double2" 0.49999973177909851 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
